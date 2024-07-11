@@ -1,0 +1,21 @@
+import { TabContent } from "./components/tabContent";
+import { TabListItem } from "./components/tabListItem";
+import { TabsList } from "./components/tabsList";
+
+export const Compound = () => {
+  return (
+    <div className="w-full">
+      <h1>Compound</h1>
+      <div className="">
+        <TabsList>
+          <TabListItem name="item1">Item 1</TabListItem>
+          <TabListItem name="item2">Item 2</TabListItem>
+          <div className="flex grow bg-slate-500 w-full mt-4 px-4 py-8">
+            <TabContent name="item1">Item 1</TabContent>
+            <TabContent name="item2">Item 2</TabContent>
+          </div>
+        </TabsList>
+      </div>
+    </div>
+  );
+};
