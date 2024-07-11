@@ -5,6 +5,7 @@ import { LinkItem } from "./shared/common/linkItem";
 import { Compound } from "./components/compound/compound";
 import { StateReducer } from "./components/state-reducer/state-reducer";
 import { ErrorExample } from "./components/error-boundary/error-example";
+import { RenderProps } from "./components/render-props/render-props";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path="/error-boundary">
           <ErrorExample />
+        </Route>
+        <Route path="/render-props">
+          <RenderProps />
         </Route>
       </Container>
     </div>

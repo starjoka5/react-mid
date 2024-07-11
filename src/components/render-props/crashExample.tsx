@@ -4,9 +4,9 @@ import { getRandomWord } from "./api";
 export const CrashExample = () => {
   const [randomWord, setRandomWord] = useState<string | undefined>(undefined);
 
-//   const crash = () => {
-//     throw new Error("crash");
-//   };
+  const crash = () => {
+    throw new Error("crash");
+  };
 
   useEffect(() => {
     getRandomWord().then((res) => {
@@ -14,6 +14,10 @@ export const CrashExample = () => {
     }).catch(()=>{
     })
   }, []);
+
+  useEffect(()=>{
+   // crash()
+  },[])
 
   if (!randomWord) {
     return <div>loading...</div>;
