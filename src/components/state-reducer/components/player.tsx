@@ -10,6 +10,7 @@ export const Player = () => {
       const stateUpdated = playingReducer(state, action);
 
       if (action.type === "PLAY" && !isAdmin) {
+
         return {
           isPlaying: false,
         };

@@ -5,6 +5,7 @@ export const getRandomWord = async () => {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const randomWord = await response.json();
+        console.log(randomWord);
         return randomWord;
-    } catch(err){ /* empty */ }
+    } catch (err) { /* empty */ }
 }

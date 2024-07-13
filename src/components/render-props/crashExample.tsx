@@ -5,19 +5,19 @@ export const CrashExample = () => {
   const [randomWord, setRandomWord] = useState<string | undefined>(undefined);
 
   const crash = () => {
-    throw new Error("crash");
-  };
+    throw ('Something happen')
+  }
 
   useEffect(() => {
     getRandomWord().then((res) => {
-        setRandomWord(res[0]);
-    }).catch(()=>{
+      setRandomWord(res[0]);
+    }).catch(() => {
     })
   }, []);
 
-  useEffect(()=>{
-   // crash()
-  },[])
+  useEffect(() => {
+    crash()
+  }, [])
 
   if (!randomWord) {
     return <div>loading...</div>;
