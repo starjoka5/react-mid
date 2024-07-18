@@ -3,10 +3,10 @@ import { TabContent } from "./components/tabContent";
 import { TabListItem } from "./components/tabListItem";
 import { TabsList } from "./components/tabsList";
 
-export const Compound = () => {
+const Compound = ({ subtitle }: { subtitle: string }) => {
   return (
     <div className="w-full">
-      <h1>Compound</h1>
+      <h1>Compound ({subtitle})</h1>
       <div className="">
         <TabsList>
           <TabListItem name="item1">Item 1</TabListItem>
@@ -37,3 +37,4 @@ export const Compound = () => {
     </div>
   );
 };
+export default Compound;

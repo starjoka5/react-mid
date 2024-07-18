@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import { getRandomWord } from "./api";
+import { getRandomWord } from "../../services/api";
 
 export const CrashExample = () => {
   const [randomWord, setRandomWord] = useState<string | undefined>(undefined);
-
-  const crash = () => {
-    throw ('Something happen')
-  }
+  // const crash = () => {
+  //   throw ('Something happen')
+  // }
 
   useEffect(() => {
     getRandomWord().then((res) => {
@@ -16,7 +15,7 @@ export const CrashExample = () => {
   }, []);
 
   useEffect(() => {
-    crash()
+    //crash()
   }, [])
 
   if (!randomWord) {
