@@ -24,7 +24,13 @@ export const playingReducer = (state: State, action: Action) => {
 
   return state;
 };
-
+// export const usersReducer = (state: State, action: Action) => {
+//   switch(action.type) {
+//     case 'USER_UPDATE':
+//       const newUser = action.payload.user
+//     return {...state, users: [...state.users, newUser]}
+//   }
+// };
 export const usePlayer = ({ reducer = playingReducer } = {}) => {
   const [{ isPlaying }, dispatch] = React.useReducer(reducer, {
     isPlaying: false,

@@ -6,7 +6,7 @@ export const useTabs = () => {
     const context = useContext(TabContext)
     
     if (!context) {
-        throw new Error("useTabs must be used within a TabProvider")
+        throw new Error("Oops! You forgot to wraped with a TabsList Component!")
     }
 
     return context
