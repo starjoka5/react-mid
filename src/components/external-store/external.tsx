@@ -8,7 +8,6 @@ export const ExternalExample = () => {
   return (
     <div className="flex flex-col gap-4">
       <Button color="primary" onClick={() => setShowing(!showing)}>Toggle</Button>
-
       {showing && <Component />}
       <Component />
     </div>
